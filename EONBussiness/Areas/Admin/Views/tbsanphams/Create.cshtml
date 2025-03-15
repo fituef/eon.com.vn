@@ -1,0 +1,85 @@
+﻿@model EONBussiness.DbContext.tbsanpham
+
+@{
+    ViewBag.Title = "THÊM MỚI SẢN PHẨM";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    input, select {
+        border-radius: 0px !important;
+    }
+</style>
+
+<h2 style="text-align:center">THÊM MỚI SẢN PHẨM</h2>
+
+<div class="form-horizontal">
+    <form action="/admin/tbsanphams/create" enctype="multipart/form-data" method="post" onsubmit="return XacNhan()">
+
+        <div class="form-group">
+            @Html.Label("DANH MỤC CHA", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    <select class="form-control" name="danhmucid" id="danhmucid" required>
+                        @Html.Action("CateNew", "tbsanphams")
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("TÊN SẢN PHẨM", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tensp, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("HÌNH ẢNH 1", htmlAttributes: new { @class = "control-label col-md-2", @required = "required" })
+            <div class="col-md-10">
+                <input name="img" accept=".jpg, .jpeg, .png" class="form-control" required type="file" />
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("HÌNH ẢNH 2", htmlAttributes: new { @class = "control-label col-md-2", @required = "required" })
+            <div class="col-md-10">
+                <input name="img1" accept=".jpg, .jpeg, .png" class="form-control" required type="file" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("TỪ KHÓA", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tukhoa, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("MÔ TẢ NGẮN", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea name="mota" rows="5" required class="form-control">@Model.mota</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("THÔNG SỐ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea name="thongso" rows="5" required class="form-control ckeditor">@Model.thongso</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("NỘI DUNG CHI TIẾT", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea name="noidung" required rows="10" class="form-control ckeditor">@Model.noidung</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="LƯU LẠI" class="btn btn-success" />
+                <input type="reset" value="HỦY" class="btn btn-danger" />
+                <a href="/admin/tbsanphams" class="btn btn-primary">QUAY LẠI</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    function XacNhan() {
+        let cf = confirm("BẠN CÓ CHẮC THỰC HIỆN");
+        return cf;
+    }
+</script>

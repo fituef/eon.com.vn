@@ -1,0 +1,144 @@
+﻿@model IEnumerable<EONBussiness.DbContext.tbsanpham>
+
+@{
+    ViewBag.Title = "QUẢN LÝ SẢN PHẨM";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="col-sm-12" style="text-align:center">
+    <h2 class="text-danger text-bold">QUẢN LÝ SẢN PHẨM</h2>
+</div>
+
+<p>
+    <a href="/admin/tbsanphams/create" class="btn btn-success">
+        THÊM MỚI <span class="glyphicon glyphicon-plus-sign"></span>
+    </a>
+</p>
+<input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Nhập tên từ khóa...">
+<table class="table table-hover table-bordered" id="myTable">
+    <tr>
+        <th style="text-align:left">
+            HÌNH ẢNH
+        </th>
+        <th style="text-align:left; max-width:200px">
+            DANH MỤC
+        </th>
+        <th style="text-align:left; max-width:200px">
+            TIÊU ĐỀ TIN
+        </th>
+        <th style="text-align:left; max-width:200px">
+            TỪ KHÓA
+        </th>
+        <th style="text-align: left; max-width: 300px">
+            MÔ TẢ
+        </th>
+        <th>
+            LƯỢT XEM
+        </th>
+        <th style="text-align:center">
+            TRẠNG THÁI
+        </th>
+        <th>
+            GHIM
+        </th>
+        <th style="text-align:center; width:100px">#</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td style="text-align:left">
+                <img src="@item.hinhanh" width="100" />
+            </td>
+            <td style="text-align:left; min-width:200px">
+                @Html.Action("getdm", "tbsanphams", new {id=item.danhmucid})
+            </td>
+            <td style="text-align:left; min-width:200px">
+                <a target="_blank" href="#">@item.tensp</a>
+            </td>
+            <td style="text-align:left">
+                @item.tukhoa
+            </td>
+            <td style="text-align:left; word-break:break-word">
+                @item.mota
+            </td>
+            <td style="text-align:left; word-break:break-word">
+                @item.viewus.Value.ToString("#,##0") Lượt xem
+            </td>
+            <td style="text-align:center">
+                @if (item.hienthi != true)
+                {
+                    <span class="btn btn-xs btn-danger">ẨN</span>
+                }
+                else
+                {
+                    <span class="btn btn-xs btn-primary">HIỂN THỊ</span>
+                }
+            </td>
+            <td>
+                @if (item.ghim == true)
+                {
+                    <form action="/admin/tbsanphams/ghim/@item.ID" method="post" onsubmit="return XacNhan()">
+                        <button class="btn btn-xs btn-success"><i class="glyphicon glyphicon-log-out"></i></button>
+                    </form>
+                }
+                else
+                {
+                    <form action="/admin/tbsanphams/ghim/@item.ID" method="post" onsubmit="return XacNhan()">
+                        <button class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
+                    </form>
+                }
+            </td>
+            <td>
+                <a href="/admin/tbsanphams/edit/@item.ID" class="btn btn-xs btn-primary"><i class="glyphicon glyphicon-edit"></i></a>
+                @if (item.hienthi == false)
+                {
+                    <form action="/admin/tbsanphams/delete/@item.ID" method="post" onsubmit="return XacNhan()">
+                        <button class="btn btn-xs btn-success"><i class="glyphicon glyphicon-log-out"></i></button>
+                    </form>
+                }
+                else
+                {
+                    <form action="/admin/tbsanphams/delete/@item.ID" method="post" onsubmit="return XacNhan()">
+                        <button class="btn btn-xs btn-danger"><i class="glyphicon glyphicon-remove"></i></button>
+                    </form>
+                }
+            </td>
+        </tr>
+    }
+
+</table>
+<script>
+
+    function XacNhan() {
+        let cf = confirm("BẠN CÓ CHẮC THỰC HIỆN?");
+        return cf;
+    }
+</script>
+<script>
+    function myFunction() {
+        // Declare variables
+        var input, filter, table, tr, td, td1, i, txtValue, txtValue1, txtValue2;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[2];
+            td1 = tr[i].getElementsByTagName("td")[1];
+            td2 = tr[i].getElementsByTagName("td")[3];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                txtValue1 = td1.textContent || td1.innerText;
+                txtValue2 = td2.textContent || td2.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue1.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>

@@ -1,0 +1,106 @@
+﻿@model EONBussiness.DbContext.tbtuyendung
+
+@{
+    ViewBag.Title = "CẬP NHẬT TIN TUYỂN DỤNG";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    input, select {
+        border-radius: 0px !important;
+    }
+</style>
+
+<h2 style="text-align:center">CẬP NHẬT TIN TUYỂN DỤNG</h2>
+<p style="text-align:center">@Model.tentd</p>
+
+<div class="form-horizontal">
+    <form action="/admin/tbtuyendungs/edit" enctype="multipart/form-data" method="post" onsubmit="return XacNhan()">
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.hienthi)
+        @Html.HiddenFor(model => model.hinhanh)
+        @Html.HiddenFor(model => model.ghim)
+        @Html.HiddenFor(model => model.viewus)
+        <div class="form-group">
+            @Html.Label("TIÊU ĐỀ TIN", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tentd, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("HÌNH ẢNH", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <img src="@Model.hinhanh" style="max-width:250PX" />
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("THAY ĐỔI HÌNH ẢNH", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input name="img" accept=".jpg, .jpeg, .png" class="form-control" type="file" />
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("TỪ KHÓA", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tukhoa, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("MÔ TẢ NGẮN", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea name="mota" rows="5" class="form-control">@Model.mota</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("MÔ TẢ CÔNG VIỆC", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea name="motacv" rows="5" required class="form-control ckeditor">@Model.motacv</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("YÊU CẦU", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea name="yeucau" rows="5" required class="form-control ckeditor">@Model.yeucau</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("QUYỀN LỢI", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea name="quyenloi" rows="5" required class="form-control ckeditor">@Model.quyenloi</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("LIÊN HỆ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea name="lienhe" rows="5" required class="form-control ckeditor">@Model.lienhe</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("NGÀY HẾT HẠN", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="date" name="ngayhethan" class="form-control"
+                       placeholder="Chọn ngày" required
+                       value="@Model.ngayhethan.Value.ToString("yyyy-MM-dd")" />
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("SỐ LƯỢNG TUYỂN", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="number" name="soluong" class="form-control"
+                       placeholder="Số lượng tuyển" required value="@Model.soluong" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="LƯU LẠI" class="btn btn-success" />
+                <input type="reset" value="HỦY" class="btn btn-danger" />
+                <a href="/admin/tbtuyendungs" class="btn btn-primary">QUAY LẠI</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    function XacNhan() {
+        let cf = confirm("BẠN CÓ CHẮC THỰC HIỆN");
+        return cf;
+    }
+</script>

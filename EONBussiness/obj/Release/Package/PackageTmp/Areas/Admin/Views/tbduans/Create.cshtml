@@ -1,0 +1,61 @@
+﻿@model EONBussiness.DbContext.tbduan
+
+@{
+    ViewBag.Title = "THÊM MỚI DỰ ÁN";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    input, select {
+        border-radius: 0px !important;
+    }
+</style>
+
+<h2 style="text-align:center">THÊM MỚI DỰ ÁN</h2>
+
+<div class="form-horizontal">
+    <form action="/admin/tbduans/create" enctype="multipart/form-data" method="post" onsubmit="return XacNhan()">
+        <div class="form-group">
+            @Html.Label("TÊN DỰ ÁN", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tenduan, new { htmlAttributes = new { @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("HÌNH ẢNH", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input name="img" accept=".jpg, .jpeg, .png" class="form-control" required type="file" />
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("TỪ KHÓA", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tukhoa, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("MÔ TẢ NGẮN", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea name="mota" rows="5" class="form-control">@Model.mota</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("THÔNG TIN DỰ ÁN", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea name="noidung" rows="5" required class="form-control ckeditor">@Model.noidung</textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="LƯU LẠI" class="btn btn-success" />
+                <input type="reset" value="HỦY" class="btn btn-danger" />
+                <a href="/admin/tbduans" class="btn btn-primary">QUAY LẠI</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    function XacNhan() {
+        let cf = confirm("BẠN CÓ CHẮC THỰC HIỆN");
+        return cf;
+    }
+</script>

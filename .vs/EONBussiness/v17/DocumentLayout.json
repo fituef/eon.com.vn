@@ -1,0 +1,120 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|D:\\backup\\Webs\\EONBussiness\\EONBussiness\\eonbussiness\\content\\css\\post-9259.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|solutionrelative:eonbussiness\\content\\css\\post-9259.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|d:\\backup\\webs\\eonbussiness\\eonbussiness\\eonbussiness\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|solutionrelative:eonbussiness\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|d:\\backup\\webs\\eonbussiness\\eonbussiness\\eonbussiness\\content\\css\\frontend.min_1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|solutionrelative:eonbussiness\\content\\css\\frontend.min_1.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|D:\\backup\\Webs\\EONBussiness\\EONBussiness\\eonbussiness\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|solutionrelative:eonbussiness\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|D:\\backup\\Webs\\EONBussiness\\EONBussiness\\eonbussiness\\content\\css\\post-17229.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|solutionrelative:eonbussiness\\content\\css\\post-17229.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|D:\\backup\\Webs\\EONBussiness\\EONBussiness\\eonbussiness\\areas\\admin\\adminarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D99AE047-B8B7-439C-9964-9BE7D63FD343}|EONBussiness\\EONBussiness.csproj|solutionrelative:eonbussiness\\areas\\admin\\adminarearegistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "frontend.min_1.css",
+              "DocumentMoniker": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Content\\css\\frontend.min_1.css",
+              "RelativeDocumentMoniker": "EONBussiness\\Content\\css\\frontend.min_1.css",
+              "ToolTip": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Content\\css\\frontend.min_1.css",
+              "RelativeToolTip": "EONBussiness\\Content\\css\\frontend.min_1.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAADR+QAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-11T11:09:13.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "post-17229.css",
+              "DocumentMoniker": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Content\\css\\post-17229.css",
+              "RelativeDocumentMoniker": "EONBussiness\\Content\\css\\post-17229.css",
+              "ToolTip": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Content\\css\\post-17229.css",
+              "RelativeToolTip": "EONBussiness\\Content\\css\\post-17229.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-11T05:51:35.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "post-9259.css",
+              "DocumentMoniker": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Content\\css\\post-9259.css",
+              "RelativeDocumentMoniker": "EONBussiness\\Content\\css\\post-9259.css",
+              "ToolTip": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Content\\css\\post-9259.css",
+              "RelativeToolTip": "EONBussiness\\Content\\css\\post-9259.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABpBQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-11T05:43:51.509Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "EONBussiness\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "EONBussiness\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAIcCAAAAAAAAAAAAAKECAAALAQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-10T13:11:44.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "EONBussiness\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "EONBussiness\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAAAEMAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-10T12:53:11.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AdminAreaRegistration.cs",
+              "DocumentMoniker": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Areas\\Admin\\AdminAreaRegistration.cs",
+              "RelativeDocumentMoniker": "EONBussiness\\Areas\\Admin\\AdminAreaRegistration.cs",
+              "ToolTip": "D:\\backup\\Webs\\EONBussiness\\EONBussiness\\EONBussiness\\Areas\\Admin\\AdminAreaRegistration.cs",
+              "RelativeToolTip": "EONBussiness\\Areas\\Admin\\AdminAreaRegistration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-06T02:43:46.957Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

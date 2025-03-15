@@ -1,0 +1,12 @@
+﻿@model IEnumerable<EONBussiness.DbContext.tbBanner>
+ 
+@foreach (var item in Model) {
+   <div class="elementor-repeater-item-151350a swiper-slide">
+       <div class="swiper-slide-bg" style="background-image:url('@item.hinhanh') !important">
+       </div>
+       <div class="swiper-slide-inner">
+           <div class="swiper-slide-contents"></div>
+       </div>
+   </div>
+}
+ 

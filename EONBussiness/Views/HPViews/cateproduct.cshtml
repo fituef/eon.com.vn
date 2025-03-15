@@ -1,0 +1,48 @@
+﻿@model IEnumerable<EONBussiness.DbContext.tbdanhmucsp>
+
+
+
+<div class="swiper-container category-slider">
+    <div class="swiper-wrapper">
+        @foreach (var item in Model)
+        {
+            <div class="swiper-slide">
+                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-41af58b" data-id="41af58b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-column-wrap elementor-element-populated">
+                        <div class="elementor-widget-wrap">
+                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-3bb0c45 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3bb0c45" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-container elementor-column-gap-default">
+                                    <div class="elementor-row">
+                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-eeedf12" data-id="eeedf12" data-element_type="column">
+                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                <div class="elementor-widget-wrap">
+                                                    <div class="elementor-element elementor-element-0d40f03 elementor-widget elementor-widget-text-editor" data-id="0d40f03" data-element_type="widget" data-widget_type="text-editor.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                <p style="text-transform:uppercase; margin-top:10px;"><a href="/danh-muc-san-pham/@item.alias-@item.ID"><span style="color: #04707d;"><strong>@item.tendanhmuc</strong></span></a></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="elementor-element elementor-element-64b4dc3 elementor-widget elementor-widget-image" data-id="64b4dc3" data-element_type="widget" data-widget_type="image.default">
+                                                        <div class="elementor-widget-container">
+                                                            <div class="elementor-image">
+                                                                <a href="/danh-muc-san-pham/@item.alias-@item.ID">
+                                                                    <img fetchpriority="high" decoding="async" width="350" height="450" src="@item.hinhanh" class="attachment-full size-full" alt="" srcset="@item.hinhanh 350w, @item.hinhanh 233w" sizes="(max-width: 350px) 100vw, 350px">
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>

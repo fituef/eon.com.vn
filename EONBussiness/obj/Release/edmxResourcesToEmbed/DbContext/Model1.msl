@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EONBusinessModelStoreContainer" CdmEntityContainer="EONBusinessEntities">
+    <EntitySetMapping Name="tbBanners">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbBanner">
+        <MappingFragment StoreEntitySet="tbBanner">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="link" ColumnName="link" />
+          <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbdoitacs">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbdoitac">
+        <MappingFragment StoreEntitySet="tbdoitac">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="tendoitac" ColumnName="tendoitac" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+          <ScalarProperty Name="viewus" ColumnName="viewus" />
+          <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+          <ScalarProperty Name="ghim" ColumnName="ghim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbduans">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbduan">
+        <MappingFragment StoreEntitySet="tbduan">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="tenduan" ColumnName="tenduan" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+          <ScalarProperty Name="viewus" ColumnName="viewus" />
+          <ScalarProperty Name="ghim" ColumnName="ghim" />
+          <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+          <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbGioiThieux">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbGioiThieu">
+        <MappingFragment StoreEntitySet="tbGioiThieu">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="tieude" ColumnName="tieude" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+          <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+          <ScalarProperty Name="viewus" ColumnName="viewus" />
+          <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbkhachhangs">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbkhachhang">
+        <MappingFragment StoreEntitySet="tbkhachhang">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="tenkhachhang" ColumnName="tenkhachhang" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+          <ScalarProperty Name="viewus" ColumnName="viewus" />
+          <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+          <ScalarProperty Name="ghim" ColumnName="ghim" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbLienHes">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbLienHe">
+        <MappingFragment StoreEntitySet="tbLienHe">
+          <ScalarProperty Name="noidungxl" ColumnName="noidungxl" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="tenkhach" ColumnName="tenkhach" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="dienthoai" ColumnName="dienthoai" />
+          <ScalarProperty Name="daichi" ColumnName="daichi" />
+          <ScalarProperty Name="chude" ColumnName="chude" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+          <ScalarProperty Name="ngaygui" ColumnName="ngaygui" />
+          <ScalarProperty Name="xuly" ColumnName="xuly" />
+          <ScalarProperty Name="ngayxuly" ColumnName="ngayxuly" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbsanphams">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbsanpham">
+        <MappingFragment StoreEntitySet="tbsanpham">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="danhmucid" ColumnName="danhmucid" />
+          <ScalarProperty Name="tensp" ColumnName="tensp" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="hinhanh1" ColumnName="hinhanh1" />
+          <ScalarProperty Name="hinhanh2" ColumnName="hinhanh2" />
+          <ScalarProperty Name="hinhanh3" ColumnName="hinhanh3" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+          <ScalarProperty Name="viewus" ColumnName="viewus" />
+          <ScalarProperty Name="ghim" ColumnName="ghim" />
+          <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+          <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+          <ScalarProperty Name="filehuongdan" ColumnName="filehuongdan" />
+          <ScalarProperty Name="isbanner" ColumnName="isbanner" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbSetups">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbSetup">
+        <MappingFragment StoreEntitySet="tbSetup">
+          <ScalarProperty Name="congthuong" ColumnName="congthuong" />
+          <ScalarProperty Name="mst" ColumnName="mst" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="trusochinh" ColumnName="trusochinh" />
+          <ScalarProperty Name="vanphong" ColumnName="vanphong" />
+          <ScalarProperty Name="dienthoai" ColumnName="dienthoai" />
+          <ScalarProperty Name="hotline" ColumnName="hotline" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="tenlienhe" ColumnName="tenlienhe" />
+          <ScalarProperty Name="emaillienhe" ColumnName="emaillienhe" />
+          <ScalarProperty Name="dienthoailienhe" ColumnName="dienthoailienhe" />
+          <ScalarProperty Name="fb" ColumnName="fb" />
+          <ScalarProperty Name="yt" ColumnName="yt" />
+          <ScalarProperty Name="lk" ColumnName="lk" />
+          <ScalarProperty Name="maps" ColumnName="maps" />
+          <ScalarProperty Name="viewus" ColumnName="viewus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbtuyendungs">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbtuyendung">
+        <MappingFragment StoreEntitySet="tbtuyendung">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="tentd" ColumnName="tentd" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="motacv" ColumnName="motacv" />
+          <ScalarProperty Name="yeucau" ColumnName="yeucau" />
+          <ScalarProperty Name="quyenloi" ColumnName="quyenloi" />
+          <ScalarProperty Name="lienhe" ColumnName="lienhe" />
+          <ScalarProperty Name="viewus" ColumnName="viewus" />
+          <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+          <ScalarProperty Name="ghim" ColumnName="ghim" />
+          <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+          <ScalarProperty Name="ngayhethan" ColumnName="ngayhethan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="C__MigrationHistory">
+      <EntityTypeMapping TypeName="EONBusinessModel.C__MigrationHistory">
+        <MappingFragment StoreEntitySet="__MigrationHistory">
+          <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+          <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetRoles">
+      <EntityTypeMapping TypeName="EONBusinessModel.AspNetRole">
+        <MappingFragment StoreEntitySet="AspNetRoles">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserClaims">
+      <EntityTypeMapping TypeName="EONBusinessModel.AspNetUserClaim">
+        <MappingFragment StoreEntitySet="AspNetUserClaims">
+          <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+          <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUserLogins">
+      <EntityTypeMapping TypeName="EONBusinessModel.AspNetUserLogin">
+        <MappingFragment StoreEntitySet="AspNetUserLogins">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+          <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AspNetUsers">
+      <EntityTypeMapping TypeName="EONBusinessModel.AspNetUser">
+        <MappingFragment StoreEntitySet="AspNetUsers">
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+          <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+          <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+          <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+          <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+          <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+          <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AspNetUserRoles" TypeName="EONBusinessModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+      <EndProperty Name="AspNetUser">
+        <ScalarProperty Name="Id" ColumnName="UserId" />
+      </EndProperty>
+      <EndProperty Name="AspNetRole">
+        <ScalarProperty Name="Id" ColumnName="RoleId" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <EntitySetMapping Name="tbdanhmuctts">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbdanhmuctt">
+        <MappingFragment StoreEntitySet="tbdanhmuctt">
+          <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="tendanhmuc" ColumnName="tendanhmuc" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbdanhmucsps">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbdanhmucsp">
+        <MappingFragment StoreEntitySet="tbdanhmucsp">
+          <ScalarProperty Name="home" ColumnName="home" />
+          <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+          <ScalarProperty Name="idcha" ColumnName="idcha" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="chitiet" ColumnName="chitiet" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="tendanhmuc" ColumnName="tendanhmuc" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbtintucs">
+      <EntityTypeMapping TypeName="EONBusinessModel.tbtintuc">
+        <MappingFragment StoreEntitySet="tbtintuc">
+          <ScalarProperty Name="iddm" ColumnName="iddm" />
+          <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+          <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+          <ScalarProperty Name="ghim" ColumnName="ghim" />
+          <ScalarProperty Name="viewus" ColumnName="viewus" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+          <ScalarProperty Name="alias" ColumnName="alias" />
+          <ScalarProperty Name="tentintuc" ColumnName="tentintuc" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

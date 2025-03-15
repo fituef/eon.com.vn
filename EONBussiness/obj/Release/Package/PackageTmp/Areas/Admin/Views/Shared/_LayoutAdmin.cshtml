@@ -1,0 +1,199 @@
+﻿<!DOCTYPE html>
+<html lang="vi" xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/Article" data-sbro-popup-lock="true" data-sbro-ads-lock="true" data-sbro-deals-lock="true" data-sbro-extensions-lock="true" style="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>EON.COM.VN| @ViewBag.Title</title>
+    <base href=".">
+    <link href="~/Areas/Admin/Content/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/vendor/morrisjs/morris.css" rel="stylesheet">
+    <link href="~/Areas/Admin/Content/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/Content/images/Thiet-ke-chua-co-ten-1.png" rel="shortcut icon" type="image/x-icon" />
+    <style>
+        th, td {
+            text-align: center;
+            vertical-align: middle!important;
+        }
+
+        .btn, .pagination > li:last-child > a {
+            border-radius: 0px;
+        }
+
+        .pagination > li:first-child > a, .pagination > li:first-child > span {
+            border-radius: 0px;
+        }
+
+        input {
+            border-radius: 0px;
+        }
+    </style>
+    <style>
+        img {
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-width: none !important;
+        }
+    </style>
+
+</head>
+<body role="document">
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" target="_blank" href="/"><img src="/Content/images/Thiet-ke-chua-co-ten-1.png" width="80" style="margin-top:-5px" /></a>
+                <a class="navbar-brand" href="/Admin">HỆ THỐNG QUẢN LÝ - EON.COM.VN</a>
+            </div>
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user fa-fw"></i> @User.Identity.Name
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="/account/logoff"><i class="fa fa-sign-out fa-fw"></i>Đăng xuất</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="#"><i class="fa fa-product-hunt"></i> DANH MỤC<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/admin/tbdmtintucs"><i class="fa fa-reorder"></i> TIN TỨC<span class="fa arrow"></span></a>
+                                </li> 
+                                <li>
+                                    <a href="/admin/tbtmsanphams"><i class="fa fa-reorder"></i> SẢN PHẨM<span class="fa arrow"></span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-product-hunt"></i> SẢN PHẨM<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/Admin/quan-ly-san-pham"><i class="fa fa-reorder"></i> DANH SÁCH<span class="fa arrow"></span></a>
+                                </li>
+                                <li>
+                                    <a href="/Admin/them-moi-san-pham"><i class="fa fa-plus"></i> THÊM  MỚI SẢN PHẨM<span class="fa arrow"></span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-amazon"></i> TUYỂN DỤNG<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/admin/tbtuyendungs" class="fa fa-reorder"> BÀI VIẾT</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/tbtuyendungs/create" class="fa fa-plus"> THÊM MỚI </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-internet-explorer"></i> TIN TỨC<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/admin/tbtintucs" class="fa fa-reorder"> BÀI VIẾT</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/tbtintucs/create" class="fa fa-plus"> THÊM MỚI </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-arrow-circle-right"></i> ĐỐI TÁC<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/admin/tbdoitacs" class="fa fa-reorder"> BÀI VIẾT</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/tbdoitacs/create" class="fa fa-plus"> THÊM MỚI </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-newspaper-o"></i> DỰ ÁN<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/admin/tbduans" class="fa fa-reorder"> BÀI VIẾT</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/tbduans/create" class="fa fa-plus"> THÊM MỚI </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-users"></i> KHÁCH HÀNG<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/admin/tbkhachhangs" class="fa fa-reorder"> KHÁCH HÀNG</a>
+                                </li>
+                                <li>
+                                    <a href="/admin/tbkhachhangs/create" class="fa fa-plus"> THÊM MỚI</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/admin/tblienhes" class="fa fa-comment-o"> TƯ VẤN</a>
+                        </li> 
+                        <li>
+                            <a href="/Admin/gioi-thieu" class="fa fa-info-circle"> GIỚI THIỆU</a>
+                        </li> 
+                        <li>
+                            <a href="/Admin/tbbanners" class="fa fa-sliders"> BANNER HOME</a>
+                        </li>
+                        <li>
+                            <a href="/Admin/thong-tin-lien-he" class="fa fa-info"> THÔNG TIN LIÊN HỆ</a>
+                        </li>
+                        <li>
+                            <a href="/Admin/quy-trinh-lam-viec" class="fa fa-wifi"> QUY TRÌNH LÀM VIỆC</a>
+                        </li>
+                        <li>
+                            <a href="/Admin/chinh-sach-va-dieu-khoan" class="fa fa-file-text-o"> CHÍNH SÁCH & ĐIỀU KHOẢN</a>
+                        </li>
+                        <li>
+                            <a href="/Admin/hoi-dap" class="fa fa-question-circle-o"> CÂU HỎI THƯỜNG GẶP</a>
+                        </li>
+                        <li>
+                            <a href="/admin/sysadmin" class="fa fa-lightbulb-o"> CÀI ĐẶT TRANG</a>
+                        </li>
+                        <li>
+                            <a href="/admin/acaches" class="fa fa-recycle"> XÓA CACHE</a>
+                        </li>
+                        <li>
+                            <a style="min-height:40px !important"></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="page-wrapper">
+            <div class="row">
+                @RenderBody()
+            </div>
+        </div>
+    <script src="~/Areas/Admin/Content/vendor/jquery/jquery.min.js"></script>
+    <script src="/Areas/Admin/Content/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/Areas/Admin/Content/vendor/metisMenu/metisMenu.min.js"></script>
+    <script src="/Areas/Admin/Content/vendor/raphael/raphael.min.js"></script>
+    <script src="/Areas/Admin/Content/dist/js/sb-admin-2.js"></script>
+    <script src="~/Areas/Admin/Content/ckeditor/ckeditor.js"></script>
+</body>
+</html>

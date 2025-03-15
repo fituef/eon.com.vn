@@ -1,0 +1,99 @@
+﻿@model EONBussiness.DbContext.tbLienHe
+
+@{
+    ViewBag.Title = "XỬ LÝ THÔNG TIN LIÊN HỆ";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    input, select {
+        border-radius: 0px !important;
+    }
+</style>
+
+<h2 style="text-align:center">XỬ LÝ THÔNG TIN LIÊN HỆ</h2>
+<h3 style="text-align:center; text-transform:uppercase">KHÁCH HÀNG: @Model.tenkhach</h3>
+
+<div class="form-horizontal">
+    <form action="/admin/tblienhes/edit" enctype="multipart/form-data" method="post" onsubmit="return XacNhan()">
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.ngaygui)
+        <div class="form-group">
+            @Html.Label("TÊN KHÁCH HÀNG", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tenkhach, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("EMAIL KHÁCH HÀNG", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("SĐT KHÁCH HÀNG", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dienthoai, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("ĐỊA CHỈ KHÁCH HÀNG", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.daichi, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("CHỦ ĐỀ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.chude, new { htmlAttributes = new { @class = "form-control", @readonly = true } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("NỘI DUNG", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <textarea class="form-control" readonly rows="5" name="noidung">@Model.noidung</textarea>
+            </div>
+        </div>
+        @if (Model.xuly == false)
+        {
+            <div class="form-group">
+                @Html.Label("NỘI DUNG TƯ VẤN", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <textarea class="form-control" rows="5" name="noidungxl">@Model.noidungxl</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="LƯU LẠI" class="btn btn-success" />
+                    <a href="/admin/tblienhes" class="btn btn-primary">QUAY LẠI</a>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="form-group">
+                @Html.Label("NGÀY TƯ VẤN", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <input class="form-control" readonly value="@Model.ngayxuly.Value.ToString("dd-MM-yyyy")" />
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.Label("NỘI DUNG TƯ VẤN", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <textarea class="form-control" readonly rows="5" name="noidungxl">@Model.noidungxl</textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <a href="/admin/tblienhes" class="btn btn-primary">QUAY LẠI</a>
+                </div>
+            </div>
+        }
+    </form>
+</div>
+<script>
+    function XacNhan() {
+        let cf = confirm("BẠN CÓ CHẮC THỰC HIỆN");
+        return cf;
+    }
+</script>

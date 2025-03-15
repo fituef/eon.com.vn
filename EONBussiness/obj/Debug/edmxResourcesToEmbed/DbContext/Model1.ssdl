@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EONBusinessModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+    <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetRoles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaims">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ClaimType" Type="nvarchar(max)" />
+    <Property Name="ClaimValue" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogins">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUserRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AspNetUsers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+    <Property Name="PasswordHash" Type="nvarchar(max)" />
+    <Property Name="SecurityStamp" Type="nvarchar(max)" />
+    <Property Name="PhoneNumber" Type="nvarchar(max)" />
+    <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="datetime" />
+    <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tbBanner">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+    <Property Name="link" Type="varchar" MaxLength="150" />
+    <Property Name="hienthi" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbdanhmucsp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tendanhmuc" Type="nvarchar" MaxLength="100" />
+    <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+    <Property Name="tukhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="mota" Type="nvarchar" MaxLength="300" />
+    <Property Name="chitiet" Type="nvarchar(max)" />
+    <Property Name="alias" Type="varchar" MaxLength="100" />
+    <Property Name="idcha" Type="int" />
+    <Property Name="hienthi" Type="bit" />
+    <Property Name="home" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbdanhmuctt">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tendanhmuc" Type="nvarchar" MaxLength="100" />
+    <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+    <Property Name="tukhoa" Type="nvarchar" MaxLength="100" />
+    <Property Name="mota" Type="nvarchar" MaxLength="4000" />
+    <Property Name="alias" Type="varchar" MaxLength="100" />
+    <Property Name="hienthi" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbdoitac">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tendoitac" Type="nvarchar" MaxLength="150" />
+    <Property Name="alias" Type="varchar" MaxLength="150" />
+    <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+    <Property Name="mota" Type="nvarchar" MaxLength="150" />
+    <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+    <Property Name="noidung" Type="nvarchar(max)" />
+    <Property Name="viewus" Type="int" />
+    <Property Name="hienthi" Type="bit" />
+    <Property Name="ghim" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbduan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenduan" Type="nvarchar" MaxLength="150" />
+    <Property Name="alias" Type="varchar" MaxLength="150" />
+    <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+    <Property Name="mota" Type="nvarchar" MaxLength="150" />
+    <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+    <Property Name="soluong" Type="int" />
+    <Property Name="noidung" Type="nvarchar(max)" />
+    <Property Name="viewus" Type="int" />
+    <Property Name="ghim" Type="bit" />
+    <Property Name="hienthi" Type="bit" />
+    <Property Name="ngaycapnhat" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbGioiThieu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tieude" Type="nvarchar" MaxLength="150" />
+    <Property Name="alias" Type="varchar" MaxLength="150" />
+    <Property Name="mota" Type="nvarchar" MaxLength="200" />
+    <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+    <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+    <Property Name="noidung" Type="nvarchar(max)" />
+    <Property Name="hienthi" Type="bit" />
+    <Property Name="viewus" Type="int" />
+    <Property Name="ngaycapnhat" Type="datetime" />
+  </EntityType>
+  <EntityType Name="tbkhachhang">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenkhachhang" Type="nvarchar" MaxLength="150" />
+    <Property Name="alias" Type="varchar" MaxLength="150" />
+    <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+    <Property Name="mota" Type="nvarchar" MaxLength="150" />
+    <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+    <Property Name="noidung" Type="nvarchar(max)" />
+    <Property Name="viewus" Type="int" />
+    <Property Name="hienthi" Type="bit" />
+    <Property Name="ghim" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbLienHe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tenkhach" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="dienthoai" Type="varchar" MaxLength="12" />
+    <Property Name="daichi" Type="nvarchar" MaxLength="150" />
+    <Property Name="chude" Type="nvarchar" MaxLength="100" />
+    <Property Name="noidung" Type="nvarchar" MaxLength="4000" />
+    <Property Name="ngaygui" Type="datetime" />
+    <Property Name="xuly" Type="bit" />
+    <Property Name="ngayxuly" Type="datetime" />
+    <Property Name="noidungxl" Type="nvarchar" MaxLength="4000" />
+  </EntityType>
+  <EntityType Name="tbsanpham">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="danhmucid" Type="int" />
+    <Property Name="tensp" Type="nvarchar" MaxLength="150" />
+    <Property Name="alias" Type="varchar" MaxLength="150" />
+    <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+    <Property Name="mota" Type="nvarchar" MaxLength="150" />
+    <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+    <Property Name="hinhanh1" Type="varchar" MaxLength="150" />
+    <Property Name="hinhanh2" Type="varchar" MaxLength="150" />
+    <Property Name="hinhanh3" Type="varchar" MaxLength="150" />
+    <Property Name="soluong" Type="int" />
+    <Property Name="noidung" Type="nvarchar(max)" />
+    <Property Name="thongso" Type="nvarchar(max)" />
+    <Property Name="viewus" Type="int" />
+    <Property Name="ghim" Type="bit" />
+    <Property Name="hienthi" Type="bit" />
+    <Property Name="ngaycapnhat" Type="datetime" />
+    <Property Name="filehuongdan" Type="varchar" MaxLength="150" />
+    <Property Name="isbanner" Type="bit" />
+  </EntityType>
+  <EntityType Name="tbSetup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="trusochinh" Type="nvarchar" MaxLength="300" />
+    <Property Name="vanphong" Type="nvarchar" MaxLength="300" />
+    <Property Name="dienthoai" Type="varchar" MaxLength="20" />
+    <Property Name="hotline" Type="varchar" MaxLength="20" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="tenlienhe" Type="nvarchar" MaxLength="50" />
+    <Property Name="emaillienhe" Type="varchar" MaxLength="50" />
+    <Property Name="dienthoailienhe" Type="varchar" MaxLength="12" />
+    <Property Name="fb" Type="varchar" MaxLength="150" />
+    <Property Name="yt" Type="varchar" MaxLength="150" />
+    <Property Name="lk" Type="varchar" MaxLength="150" />
+    <Property Name="mst" Type="nvarchar" MaxLength="200" />
+    <Property Name="maps" Type="varchar" MaxLength="300" />
+    <Property Name="viewus" Type="int" />
+    <Property Name="congthuong" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="tbtintuc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tentintuc" Type="nvarchar" MaxLength="150" />
+    <Property Name="alias" Type="varchar" MaxLength="150" />
+    <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+    <Property Name="mota" Type="nvarchar" MaxLength="150" />
+    <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+    <Property Name="noidung" Type="nvarchar(max)" />
+    <Property Name="viewus" Type="int" />
+    <Property Name="ghim" Type="bit" />
+    <Property Name="hienthi" Type="bit" />
+    <Property Name="ngaycapnhat" Type="datetime" />
+    <Property Name="iddm" Type="int" />
+  </EntityType>
+  <EntityType Name="tbtuyendung">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tentd" Type="nvarchar" MaxLength="150" />
+    <Property Name="alias" Type="varchar" MaxLength="150" />
+    <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+    <Property Name="mota" Type="nvarchar" MaxLength="150" />
+    <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+    <Property Name="soluong" Type="int" />
+    <Property Name="motacv" Type="nvarchar(max)" />
+    <Property Name="yeucau" Type="nvarchar(max)" />
+    <Property Name="quyenloi" Type="nvarchar(max)" />
+    <Property Name="lienhe" Type="nvarchar(max)" />
+    <Property Name="viewus" Type="int" />
+    <Property Name="hienthi" Type="bit" />
+    <Property Name="ghim" Type="bit" />
+    <Property Name="ngaycapnhat" Type="datetime" />
+    <Property Name="ngayhethan" Type="datetime" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaims">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogins">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+    <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetRoles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+    <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EONBusinessModelStoreContainer">
+    <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbBanner" EntityType="Self.tbBanner" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbdanhmucsp" EntityType="Self.tbdanhmucsp" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbdanhmuctt" EntityType="Self.tbdanhmuctt" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbdoitac" EntityType="Self.tbdoitac" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbduan" EntityType="Self.tbduan" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbGioiThieu" EntityType="Self.tbGioiThieu" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbkhachhang" EntityType="Self.tbkhachhang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbLienHe" EntityType="Self.tbLienHe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbsanpham" EntityType="Self.tbsanpham" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbSetup" EntityType="Self.tbSetup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbtintuc" EntityType="Self.tbtintuc" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbtuyendung" EntityType="Self.tbtuyendung" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+      <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1c7e4a74bd254a208c33809a4b47dc72" Name="Diagram1">
+        <EntityTypeShape EntityType="EONBusinessModel.tbBanner" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EONBusinessModel.tbdoitac" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EONBusinessModel.tbduan" Width="1.5" PointX="2.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EONBusinessModel.tbGioiThieu" Width="1.5" PointX="4.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EONBusinessModel.tbkhachhang" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EONBusinessModel.tbLienHe" Width="1.5" PointX="6.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EONBusinessModel.tbsanpham" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EONBusinessModel.tbSetup" Width="1.5" PointX="4.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EONBusinessModel.tbtuyendung" Width="1.5" PointX="0.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EONBusinessModel.C__MigrationHistory" Width="1.5" PointX="11.375" PointY="6.75" />
+        <EntityTypeShape EntityType="EONBusinessModel.AspNetRole" Width="1.5" PointX="11.375" PointY="2.5" />
+        <EntityTypeShape EntityType="EONBusinessModel.AspNetUserClaim" Width="1.5" PointX="15.875" PointY="1" />
+        <EntityTypeShape EntityType="EONBusinessModel.AspNetUserLogin" Width="1.5" PointX="15.875" PointY="3.75" />
+        <EntityTypeShape EntityType="EONBusinessModel.AspNetUser" Width="1.5" PointX="13.625" PointY="1.375" />
+        <AssociationConnector Association="EONBusinessModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="EONBusinessModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="EONBusinessModel.AspNetUserRoles" />
+        <EntityTypeShape EntityType="EONBusinessModel.tbdanhmuctt" Width="1.5" PointX="7.375" PointY="11.75" />
+        <EntityTypeShape EntityType="EONBusinessModel.tbdanhmucsp" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="EONBusinessModel.tbtintuc" Width="1.5" PointX="9.375" PointY="9.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

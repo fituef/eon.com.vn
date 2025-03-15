@@ -1,0 +1,982 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="EONBusinessModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tbBanner">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+          <Property Name="link" Type="varchar" MaxLength="150" />
+          <Property Name="hienthi" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbdanhmucsp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tendanhmuc" Type="nvarchar" MaxLength="100" />
+          <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+          <Property Name="tukhoa" Type="nvarchar" MaxLength="100" />
+          <Property Name="mota" Type="nvarchar" MaxLength="300" />
+          <Property Name="chitiet" Type="nvarchar(max)" />
+          <Property Name="alias" Type="varchar" MaxLength="100" />
+          <Property Name="idcha" Type="int" />
+          <Property Name="hienthi" Type="bit" />
+          <Property Name="home" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbdanhmuctt">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tendanhmuc" Type="nvarchar" MaxLength="100" />
+          <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+          <Property Name="tukhoa" Type="nvarchar" MaxLength="100" />
+          <Property Name="mota" Type="nvarchar" MaxLength="4000" />
+          <Property Name="alias" Type="varchar" MaxLength="100" />
+          <Property Name="hienthi" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbdoitac">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tendoitac" Type="nvarchar" MaxLength="150" />
+          <Property Name="alias" Type="varchar" MaxLength="150" />
+          <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+          <Property Name="mota" Type="nvarchar" MaxLength="150" />
+          <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+          <Property Name="noidung" Type="nvarchar(max)" />
+          <Property Name="viewus" Type="int" />
+          <Property Name="hienthi" Type="bit" />
+          <Property Name="ghim" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbduan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenduan" Type="nvarchar" MaxLength="150" />
+          <Property Name="alias" Type="varchar" MaxLength="150" />
+          <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+          <Property Name="mota" Type="nvarchar" MaxLength="150" />
+          <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+          <Property Name="soluong" Type="int" />
+          <Property Name="noidung" Type="nvarchar(max)" />
+          <Property Name="viewus" Type="int" />
+          <Property Name="ghim" Type="bit" />
+          <Property Name="hienthi" Type="bit" />
+          <Property Name="ngaycapnhat" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbGioiThieu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tieude" Type="nvarchar" MaxLength="150" />
+          <Property Name="alias" Type="varchar" MaxLength="150" />
+          <Property Name="mota" Type="nvarchar" MaxLength="200" />
+          <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+          <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+          <Property Name="noidung" Type="nvarchar(max)" />
+          <Property Name="hienthi" Type="bit" />
+          <Property Name="viewus" Type="int" />
+          <Property Name="ngaycapnhat" Type="datetime" />
+        </EntityType>
+        <EntityType Name="tbkhachhang">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenkhachhang" Type="nvarchar" MaxLength="150" />
+          <Property Name="alias" Type="varchar" MaxLength="150" />
+          <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+          <Property Name="mota" Type="nvarchar" MaxLength="150" />
+          <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+          <Property Name="noidung" Type="nvarchar(max)" />
+          <Property Name="viewus" Type="int" />
+          <Property Name="hienthi" Type="bit" />
+          <Property Name="ghim" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbLienHe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tenkhach" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="dienthoai" Type="varchar" MaxLength="12" />
+          <Property Name="daichi" Type="nvarchar" MaxLength="150" />
+          <Property Name="chude" Type="nvarchar" MaxLength="100" />
+          <Property Name="noidung" Type="nvarchar" MaxLength="4000" />
+          <Property Name="ngaygui" Type="datetime" />
+          <Property Name="xuly" Type="bit" />
+          <Property Name="ngayxuly" Type="datetime" />
+          <Property Name="noidungxl" Type="nvarchar" MaxLength="4000" />
+        </EntityType>
+        <EntityType Name="tbsanpham">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="danhmucid" Type="int" />
+          <Property Name="tensp" Type="nvarchar" MaxLength="150" />
+          <Property Name="alias" Type="varchar" MaxLength="150" />
+          <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+          <Property Name="mota" Type="nvarchar" MaxLength="150" />
+          <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+          <Property Name="hinhanh1" Type="varchar" MaxLength="150" />
+          <Property Name="hinhanh2" Type="varchar" MaxLength="150" />
+          <Property Name="hinhanh3" Type="varchar" MaxLength="150" />
+          <Property Name="soluong" Type="int" />
+          <Property Name="noidung" Type="nvarchar(max)" />
+          <Property Name="thongso" Type="nvarchar(max)" />
+          <Property Name="viewus" Type="int" />
+          <Property Name="ghim" Type="bit" />
+          <Property Name="hienthi" Type="bit" />
+          <Property Name="ngaycapnhat" Type="datetime" />
+          <Property Name="filehuongdan" Type="varchar" MaxLength="150" />
+          <Property Name="isbanner" Type="bit" />
+        </EntityType>
+        <EntityType Name="tbSetup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="trusochinh" Type="nvarchar" MaxLength="300" />
+          <Property Name="vanphong" Type="nvarchar" MaxLength="300" />
+          <Property Name="dienthoai" Type="varchar" MaxLength="20" />
+          <Property Name="hotline" Type="varchar" MaxLength="20" />
+          <Property Name="email" Type="varchar" MaxLength="50" />
+          <Property Name="tenlienhe" Type="nvarchar" MaxLength="50" />
+          <Property Name="emaillienhe" Type="varchar" MaxLength="50" />
+          <Property Name="dienthoailienhe" Type="varchar" MaxLength="12" />
+          <Property Name="fb" Type="varchar" MaxLength="150" />
+          <Property Name="yt" Type="varchar" MaxLength="150" />
+          <Property Name="lk" Type="varchar" MaxLength="150" />
+          <Property Name="mst" Type="nvarchar" MaxLength="200" />
+          <Property Name="maps" Type="varchar" MaxLength="300" />
+          <Property Name="viewus" Type="int" />
+          <Property Name="congthuong" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="tbtintuc">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tentintuc" Type="nvarchar" MaxLength="150" />
+          <Property Name="alias" Type="varchar" MaxLength="150" />
+          <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+          <Property Name="mota" Type="nvarchar" MaxLength="150" />
+          <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+          <Property Name="noidung" Type="nvarchar(max)" />
+          <Property Name="viewus" Type="int" />
+          <Property Name="ghim" Type="bit" />
+          <Property Name="hienthi" Type="bit" />
+          <Property Name="ngaycapnhat" Type="datetime" />
+          <Property Name="iddm" Type="int" />
+        </EntityType>
+        <EntityType Name="tbtuyendung">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="tentd" Type="nvarchar" MaxLength="150" />
+          <Property Name="alias" Type="varchar" MaxLength="150" />
+          <Property Name="tukhoa" Type="nvarchar" MaxLength="150" />
+          <Property Name="mota" Type="nvarchar" MaxLength="150" />
+          <Property Name="hinhanh" Type="varchar" MaxLength="150" />
+          <Property Name="soluong" Type="int" />
+          <Property Name="motacv" Type="nvarchar(max)" />
+          <Property Name="yeucau" Type="nvarchar(max)" />
+          <Property Name="quyenloi" Type="nvarchar(max)" />
+          <Property Name="lienhe" Type="nvarchar(max)" />
+          <Property Name="viewus" Type="int" />
+          <Property Name="hienthi" Type="bit" />
+          <Property Name="ghim" Type="bit" />
+          <Property Name="ngaycapnhat" Type="datetime" />
+          <Property Name="ngayhethan" Type="datetime" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="EONBusinessModelStoreContainer">
+          <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbBanner" EntityType="Self.tbBanner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbdanhmucsp" EntityType="Self.tbdanhmucsp" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbdanhmuctt" EntityType="Self.tbdanhmuctt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbdoitac" EntityType="Self.tbdoitac" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbduan" EntityType="Self.tbduan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbGioiThieu" EntityType="Self.tbGioiThieu" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbkhachhang" EntityType="Self.tbkhachhang" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbLienHe" EntityType="Self.tbLienHe" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbsanpham" EntityType="Self.tbsanpham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbSetup" EntityType="Self.tbSetup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbtintuc" EntityType="Self.tbtintuc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tbtuyendung" EntityType="Self.tbtuyendung" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetRoles_RoleId">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserRoles_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="EONBusinessModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tbBanner">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="link" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="hienthi" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbdoitac">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tendoitac" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="viewus" Type="Int32" />
+          <Property Name="hienthi" Type="Boolean" />
+          <Property Name="ghim" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbduan">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenduan" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="soluong" Type="Int32" />
+          <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="viewus" Type="Int32" />
+          <Property Name="ghim" Type="Boolean" />
+          <Property Name="hienthi" Type="Boolean" />
+          <Property Name="ngaycapnhat" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tbGioiThieu">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tieude" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="mota" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="hienthi" Type="Boolean" />
+          <Property Name="viewus" Type="Int32" />
+          <Property Name="ngaycapnhat" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="tbkhachhang">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenkhachhang" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="viewus" Type="Int32" />
+          <Property Name="hienthi" Type="Boolean" />
+          <Property Name="ghim" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbLienHe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tenkhach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dienthoai" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="daichi" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="chude" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="noidung" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="ngaygui" Type="DateTime" Precision="3" />
+          <Property Name="xuly" Type="Boolean" />
+          <Property Name="ngayxuly" Type="DateTime" Precision="3" />
+          <Property Name="noidungxl" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbsanpham">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="danhmucid" Type="Int32" />
+          <Property Name="tensp" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="hinhanh1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="hinhanh2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="hinhanh3" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="soluong" Type="Int32" />
+          <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="viewus" Type="Int32" />
+          <Property Name="ghim" Type="Boolean" />
+          <Property Name="hienthi" Type="Boolean" />
+          <Property Name="ngaycapnhat" Type="DateTime" Precision="3" />
+          <Property Name="filehuongdan" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="isbanner" Type="Boolean" />
+          <Property Name="thongso" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="tbSetup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="trusochinh" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="vanphong" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="dienthoai" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="hotline" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tenlienhe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="emaillienhe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="dienthoailienhe" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="fb" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="yt" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="lk" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="maps" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+          <Property Name="viewus" Type="Int32" />
+          <Property Name="mst" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="congthuong" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tbtuyendung">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tentd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="soluong" Type="Int32" />
+          <Property Name="motacv" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="yeucau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="quyenloi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="lienhe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="viewus" Type="Int32" />
+          <Property Name="hienthi" Type="Boolean" />
+          <Property Name="ghim" Type="Boolean" />
+          <Property Name="ngaycapnhat" Type="DateTime" Precision="3" />
+          <Property Name="ngayhethan" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="EONBusinessEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tbBanners" EntityType="Self.tbBanner" />
+          <EntitySet Name="tbdoitacs" EntityType="Self.tbdoitac" />
+          <EntitySet Name="tbduans" EntityType="Self.tbduan" />
+          <EntitySet Name="tbGioiThieux" EntityType="Self.tbGioiThieu" />
+          <EntitySet Name="tbkhachhangs" EntityType="Self.tbkhachhang" />
+          <EntitySet Name="tbLienHes" EntityType="Self.tbLienHe" />
+          <EntitySet Name="tbsanphams" EntityType="Self.tbsanpham" />
+          <EntitySet Name="tbSetups" EntityType="Self.tbSetup" />
+          <EntitySet Name="tbtuyendungs" EntityType="Self.tbtuyendung" />
+          <EntitySet Name="C__MigrationHistory" EntityType="EONBusinessModel.C__MigrationHistory" />
+          <EntitySet Name="AspNetRoles" EntityType="EONBusinessModel.AspNetRole" />
+          <EntitySet Name="AspNetUserClaims" EntityType="EONBusinessModel.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="EONBusinessModel.AspNetUserLogin" />
+          <EntitySet Name="AspNetUsers" EntityType="EONBusinessModel.AspNetUser" />
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="EONBusinessModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="EONBusinessModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="EONBusinessModel.AspNetUserRoles">
+            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          <EntitySet Name="tbdanhmuctts" EntityType="EONBusinessModel.tbdanhmuctt" />
+          <EntitySet Name="tbdanhmucsps" EntityType="EONBusinessModel.tbdanhmucsp" />
+          <EntitySet Name="tbtintucs" EntityType="EONBusinessModel.tbtintuc" />
+        </EntityContainer>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="EONBusinessModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="EONBusinessModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="EONBusinessModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="EONBusinessModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="EONBusinessModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+          <NavigationProperty Name="AspNetRoles" Relationship="EONBusinessModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+        </EntityType>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Type="EONBusinessModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="EONBusinessModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaim">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Type="EONBusinessModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="EONBusinessModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogin">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Type="EONBusinessModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+          <End Type="EONBusinessModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+        </Association>
+        <EntityType Name="tbdanhmuctt">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tendanhmuc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tukhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="mota" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+          <Property Name="alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="hienthi" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbdanhmucsp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tendanhmuc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tukhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="mota" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="chitiet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="idcha" Type="Int32" />
+          <Property Name="hienthi" Type="Boolean" />
+          <Property Name="home" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="tbtintuc">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="tentintuc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="viewus" Type="Int32" />
+          <Property Name="ghim" Type="Boolean" />
+          <Property Name="hienthi" Type="Boolean" />
+          <Property Name="ngaycapnhat" Type="DateTime" Precision="3" />
+          <Property Name="iddm" Type="Int32" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="EONBusinessModelStoreContainer" CdmEntityContainer="EONBusinessEntities">
+          <EntitySetMapping Name="tbBanners">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbBanner">
+              <MappingFragment StoreEntitySet="tbBanner">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="link" ColumnName="link" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbdoitacs">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbdoitac">
+              <MappingFragment StoreEntitySet="tbdoitac">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="tendoitac" ColumnName="tendoitac" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="viewus" ColumnName="viewus" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="ghim" ColumnName="ghim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbduans">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbduan">
+              <MappingFragment StoreEntitySet="tbduan">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="tenduan" ColumnName="tenduan" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="viewus" ColumnName="viewus" />
+                <ScalarProperty Name="ghim" ColumnName="ghim" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbGioiThieux">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbGioiThieu">
+              <MappingFragment StoreEntitySet="tbGioiThieu">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="tieude" ColumnName="tieude" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="viewus" ColumnName="viewus" />
+                <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbkhachhangs">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbkhachhang">
+              <MappingFragment StoreEntitySet="tbkhachhang">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="tenkhachhang" ColumnName="tenkhachhang" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="viewus" ColumnName="viewus" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="ghim" ColumnName="ghim" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbLienHes">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbLienHe">
+              <MappingFragment StoreEntitySet="tbLienHe">
+                <ScalarProperty Name="noidungxl" ColumnName="noidungxl" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="tenkhach" ColumnName="tenkhach" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="dienthoai" ColumnName="dienthoai" />
+                <ScalarProperty Name="daichi" ColumnName="daichi" />
+                <ScalarProperty Name="chude" ColumnName="chude" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="ngaygui" ColumnName="ngaygui" />
+                <ScalarProperty Name="xuly" ColumnName="xuly" />
+                <ScalarProperty Name="ngayxuly" ColumnName="ngayxuly" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbsanphams">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbsanpham">
+              <MappingFragment StoreEntitySet="tbsanpham">
+                <ScalarProperty Name="thongso" ColumnName="thongso" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="danhmucid" ColumnName="danhmucid" />
+                <ScalarProperty Name="tensp" ColumnName="tensp" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="hinhanh1" ColumnName="hinhanh1" />
+                <ScalarProperty Name="hinhanh2" ColumnName="hinhanh2" />
+                <ScalarProperty Name="hinhanh3" ColumnName="hinhanh3" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="viewus" ColumnName="viewus" />
+                <ScalarProperty Name="ghim" ColumnName="ghim" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+                <ScalarProperty Name="filehuongdan" ColumnName="filehuongdan" />
+                <ScalarProperty Name="isbanner" ColumnName="isbanner" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbSetups">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbSetup">
+              <MappingFragment StoreEntitySet="tbSetup">
+                <ScalarProperty Name="congthuong" ColumnName="congthuong" />
+                <ScalarProperty Name="mst" ColumnName="mst" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="trusochinh" ColumnName="trusochinh" />
+                <ScalarProperty Name="vanphong" ColumnName="vanphong" />
+                <ScalarProperty Name="dienthoai" ColumnName="dienthoai" />
+                <ScalarProperty Name="hotline" ColumnName="hotline" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="tenlienhe" ColumnName="tenlienhe" />
+                <ScalarProperty Name="emaillienhe" ColumnName="emaillienhe" />
+                <ScalarProperty Name="dienthoailienhe" ColumnName="dienthoailienhe" />
+                <ScalarProperty Name="fb" ColumnName="fb" />
+                <ScalarProperty Name="yt" ColumnName="yt" />
+                <ScalarProperty Name="lk" ColumnName="lk" />
+                <ScalarProperty Name="maps" ColumnName="maps" />
+                <ScalarProperty Name="viewus" ColumnName="viewus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbtuyendungs">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbtuyendung">
+              <MappingFragment StoreEntitySet="tbtuyendung">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="tentd" ColumnName="tentd" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="motacv" ColumnName="motacv" />
+                <ScalarProperty Name="yeucau" ColumnName="yeucau" />
+                <ScalarProperty Name="quyenloi" ColumnName="quyenloi" />
+                <ScalarProperty Name="lienhe" ColumnName="lienhe" />
+                <ScalarProperty Name="viewus" ColumnName="viewus" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="ghim" ColumnName="ghim" />
+                <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+                <ScalarProperty Name="ngayhethan" ColumnName="ngayhethan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="EONBusinessModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="__MigrationHistory">
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="EONBusinessModel.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="EONBusinessModel.AspNetUserClaim">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="EONBusinessModel.AspNetUserLogin">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="EONBusinessModel.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="EONBusinessModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetUser">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="AspNetRole">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="tbdanhmuctts">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbdanhmuctt">
+              <MappingFragment StoreEntitySet="tbdanhmuctt">
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="tendanhmuc" ColumnName="tendanhmuc" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbdanhmucsps">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbdanhmucsp">
+              <MappingFragment StoreEntitySet="tbdanhmucsp">
+                <ScalarProperty Name="home" ColumnName="home" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="idcha" ColumnName="idcha" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="chitiet" ColumnName="chitiet" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="tendanhmuc" ColumnName="tendanhmuc" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tbtintucs">
+            <EntityTypeMapping TypeName="EONBusinessModel.tbtintuc">
+              <MappingFragment StoreEntitySet="tbtintuc">
+                <ScalarProperty Name="iddm" ColumnName="iddm" />
+                <ScalarProperty Name="ngaycapnhat" ColumnName="ngaycapnhat" />
+                <ScalarProperty Name="hienthi" ColumnName="hienthi" />
+                <ScalarProperty Name="ghim" ColumnName="ghim" />
+                <ScalarProperty Name="viewus" ColumnName="viewus" />
+                <ScalarProperty Name="noidung" ColumnName="noidung" />
+                <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+                <ScalarProperty Name="mota" ColumnName="mota" />
+                <ScalarProperty Name="tukhoa" ColumnName="tukhoa" />
+                <ScalarProperty Name="alias" ColumnName="alias" />
+                <ScalarProperty Name="tentintuc" ColumnName="tentintuc" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

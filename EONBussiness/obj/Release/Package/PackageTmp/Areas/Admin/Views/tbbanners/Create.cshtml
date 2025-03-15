@@ -1,0 +1,45 @@
+﻿@model EONBussiness.DbContext.tbBanner
+
+@{
+    ViewBag.Title = "THÊM MỚI BANNER";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    input, select {
+        border-radius: 0px !important;
+    }
+</style>
+
+<h2 style="text-align:center">THÊM MỚI BANNER</h2>
+
+<div class="form-horizontal">
+    <form action="/admin/tbbanners/create" enctype="multipart/form-data" method="post" onsubmit="return XacNhan()">
+         
+        <div class="form-group">
+            @Html.Label("THÊM BANNER", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input name="img" accept=".jpg, .jpeg, .png" class="form-control" required type="file" />
+            </div>
+        </div> 
+        <div class="form-group">
+            @Html.Label("LINK BÀI VIẾT(NẾU CÓ)", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                 <input name="link" class="form-control" value="@Model.link" />
+            </div>
+        </div> 
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="LƯU LẠI" class="btn btn-success" />
+                <input type="reset" value="HỦY" class="btn btn-danger" />
+                <a href="/admin/tbbanners" class="btn btn-primary">QUAY LẠI</a>
+            </div>
+        </div>
+    </form>
+</div>
+<script>
+    function XacNhan() {
+        let cf = confirm("BẠN CÓ CHẮC THỰC HIỆN");
+        return cf;
+    }
+</script>

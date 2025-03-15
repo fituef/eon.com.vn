@@ -1,0 +1,789 @@
+﻿@{
+    ViewBag.Title = "CÔNG TY TNHH THƯƠNG MẠI & DỊCH VỤ EON";
+}
+<style>
+    .category-slider {
+        width: 100%;
+        max-width: 1200px; /* Điều chỉnh kích thước tối đa */
+        margin: 0 auto;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+    }
+
+    .elementor-column.elementor-col-25 {
+        width: 100%;
+        max-width: 350px; /* Giữ kích thước cột như ban đầu */
+        margin: 0 auto;
+    }
+
+    .elementor-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        color: #04707d; /* Màu nút điều hướng */
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #04707d; /* Màu dot khi active */
+    }
+</style>
+<div class="site grid-container container hfeed grid-parent" id="page">
+    <div class="site-content" id="content">
+        <div data-elementor-type="wp-page" data-elementor-id="17229" class="elementor elementor-17229" data-elementor-settings="[]">
+            <div class="elementor-inner">
+                <div class="elementor-section-wrap">
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-e9707e5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e9707e5" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-no">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c10b730" data-id="c10b730" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-588399a elementor--h-position-center elementor--v-position-middle elementor-widget elementor-widget-slides" data-id="588399a" data-element_type="widget" data-settings="{&quot;navigation&quot;:&quot;none&quot;,&quot;autoplay&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;infinite&quot;:&quot;yes&quot;,&quot;transition&quot;:&quot;slide&quot;,&quot;transition_speed&quot;:500}" data-widget_type="slides.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-swiper">
+                                                        <div class="elementor-slides-wrapper elementor-main-swiper swiper-container swiper-container-initialized swiper-container-horizontal" dir="ltr" data-animation="fadeInUp" style="cursor: grab;">
+                                                            <div class="swiper-wrapper elementor-slides" style="transition-duration: 0ms; transform: translate3d(-12540px, 0px, 0px);">
+                                                                @Html.Action("Index", "HPViews")
+                                                            </div>
+                                                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section style="margin-top:15px; margin-bottom:20px" class="elementor-section elementor-top-section elementor-element elementor-element-752517f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="752517f" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-narrow">
+                            <div class="elementor-row">
+                                @Html.Action("cateproduct", "HPViews")
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-a87a7d4 elementor-hidden-desktop elementor-hidden-tablet elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a87a7d4" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8bcfdfd" data-id="8bcfdfd" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-58cb2ad elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="58cb2ad" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-f3dfd82" data-id="f3dfd82" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-797863a elementor-widget elementor-widget-text-editor" data-id="797863a" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                                <p><strong><span style="font-size: 10pt;">SẢN PHẨM</span></strong></p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section style="margin-top:10px" class="elementor-section elementor-top-section elementor-element elementor-element-d9a212d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d9a212d" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5b20956" data-id="5b20956" data-element_type="column">
+                                    <div style="padding:0px !important" class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <section style="border-radius: 0px;" class="elementor-section elementor-inner-section elementor-element elementor-element-e3725cc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e3725cc" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9bd0404" data-id="9bd0404" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-8b035be elementor-widget elementor-widget-text-editor" data-id="8b035be" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix" style="text-align:left !important; padding-top:5px; padding-bottom:5px; padding-left:5px">
+                                                                                <strong><span style="font-size: 20pt;">DỰ ÁN NỔI BẬT</span></strong>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <style>
+                        .project-slider {
+                            width: 100%;
+                            max-width: 1200px; /* Điều chỉnh kích thước tối đa */
+                            margin: 0 auto;
+                        }
+
+                        .swiper-slide {
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        .elementor-post__card {
+                            width: 100%;
+                            max-width: 400px; /* Điều chỉnh kích thước mỗi card */
+                            margin: 0 auto;
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                        }
+
+                        .elementor-post__thumbnail img {
+                            width: 100%;
+                            height: auto;
+                        }
+
+                        .swiper-button-prev, .swiper-button-next {
+                            color: #04707d; /* Màu nút điều hướng */
+                        }
+
+                        .swiper-pagination-bullet-active {
+                            background: #04707d; /* Màu dot khi active */
+                        }
+
+                        .elementor-post__title > a {
+                            text-align: center !important;
+                        }
+                    </style>
+                    <section style="margin-top:50px;" class="elementor-section elementor-top-section elementor-element elementor-element-4f139fd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4f139fd" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-dc17827" data-id="dc17827" data-element_type="column">
+                                    <div style="padding:0px !important" class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-ba9f07c elementor-widget elementor-widget-posts" data-id="ba9f07c" data-element_type="widget" data-widget_type="posts.default">
+                                                <div class="elementor-widget-container">
+                                                    <!-- Thêm Swiper Slider -->
+                                                    <div class="swiper-container project-slider">
+                                                        <div class="swiper-wrapper">
+                                                            <!-- Slide 1 -->
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px; margin-bottom: 20px !important">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="text-align: center; min-height: 200px !important; padding: 5px 10px; margin-bottom: 10px">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt" style="text-align:justify !important;">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px;">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="text-align:center; min-height:200px !important; padding:5px 10px ">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt" style="text-align:justify !important">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Slide 2 -->
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px;">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="text-align:center; min-height:200px !important; padding:5px 10px ">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt" style="text-align:justify !important">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Slide 3 -->
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px;">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="text-align:center; min-height:200px !important; padding:5px 10px ">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt" style="text-align:justify !important">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px;">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="text-align:center; min-height:200px !important; padding:5px 10px ">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt" style="text-align:justify !important">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px;">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="text-align:center; min-height:200px !important; padding:5px 10px ">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt" style="text-align:justify !important">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Nút điều hướng -->
+                                                        <!--<div class="swiper-button-prev"></div>
+                                                        <div class="swiper-button-next"></div>-->
+                                                        <!-- Phân trang (dots) -->
+                                                        <!--<div class="swiper-pagination"></div>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section style="margin-top:30px" class="elementor-section elementor-top-section elementor-element elementor-element-d9a212d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d9a212d" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5b20956" data-id="5b20956" data-element_type="column">
+                                    <div style="padding:0px !important" class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <section style="border-radius:0px" class="elementor-section elementor-inner-section elementor-element elementor-element-e3725cc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e3725cc" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9bd0404" data-id="9bd0404" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-8b035be elementor-widget elementor-widget-text-editor" data-id="8b035be" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix" style="text-align:left !important; padding-top:5px; padding-bottom:5px; padding-left:10px">
+                                                                                <strong><span style="font-size: 20pt;">SẢN PHẨM NỔI BẬT</span></strong>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section style="margin-top:20px" class="elementor-section elementor-top-section elementor-element elementor-element-a80537e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a80537e" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cf4284a" data-id="cf4284a" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-1722786 elementor-grid-5 elementor-product-loop-item--align-center elementor-grid-tablet-3 elementor-grid-mobile-2 elementor-products-grid elementor-wc-products elementor-show-pagination-border-yes elementor-widget elementor-widget-woocommerce-products" data-id="1722786" data-element_type="widget" data-widget_type="woocommerce-products.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="woocommerce columns-5 ">
+                                                        <div id="wc-column-container" class="wc-columns-container wc-columns-4 wc-tablet-columns-2 wc-mobile-columns-1">
+                                                            <div class="woocommerce-notices-wrapper"></div><ul class="products elementor-grid columns-5">
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/t2-n321_01.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t2-n321_01.png 510w, images/t2-n321_01-300x300.png 300w, images/t2-n321_01-150x150.png 150w, images/t2-n321_01-100x100.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/t2-n321_01.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t2-n321_01.png 510w, images/t2-n321_01-300x300.png 300w, images/t2-n321_01-150x150.png 150w, images/t2-n321_01-100x100.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/t2-n321_01.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t2-n321_01.png 510w, images/t2-n321_01-300x300.png 300w, images/t2-n321_01-150x150.png 150w, images/t2-n321_01-100x100.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/t2-n321_01.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t2-n321_01.png 510w, images/t2-n321_01-300x300.png 300w, images/t2-n321_01-150x150.png 150w, images/t2-n321_01-100x100.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section style="margin-top:50px" class="elementor-section elementor-top-section elementor-element elementor-element-d9a212d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d9a212d" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5b20956" data-id="5b20956" data-element_type="column">
+                                    <div style="padding:0px !important" class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <section style="border-radius:0px" class="elementor-section elementor-inner-section elementor-element elementor-element-e3725cc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e3725cc" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9bd0404" data-id="9bd0404" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-8b035be elementor-widget elementor-widget-text-editor" data-id="8b035be" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix" style="text-align:left !important; padding-top:5px; padding-bottom:5px; padding-left:10px">
+                                                                                <strong><span style="font-size: 20pt;">SẢN PHẨM MỚI VỀ</span></strong>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section style="margin-top:20px" class="elementor-section elementor-top-section elementor-element elementor-element-a80537e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a80537e" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cf4284a" data-id="cf4284a" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-1722786 elementor-grid-5 elementor-product-loop-item--align-center elementor-grid-tablet-3 elementor-grid-mobile-2 elementor-products-grid elementor-wc-products elementor-show-pagination-border-yes elementor-widget elementor-widget-woocommerce-products" data-id="1722786" data-element_type="widget" data-widget_type="woocommerce-products.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="woocommerce columns-5 ">
+                                                        <div id="wc-column-container" class="wc-columns-container wc-columns-4 wc-tablet-columns-2 wc-mobile-columns-1">
+                                                            <div class="woocommerce-notices-wrapper"></div><ul class="products elementor-grid columns-5">
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons wc-has-gallery product type-product post-18960 status-publish last instock product_cat-bo-dieu-khien-nhiet-do-pid product_cat-uncategorized product_tag-bo-dieu-khien-nhiet-do has-post-thumbnail shipping-taxable product-type-simple">
+                                                                    <a href="https://vn-tech.com.vn/?product=bo-dieu-khien-nhiet-do-novus-n321" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                        <div class="wc-product-image">
+                                                                            <div class="inside-wc-product-image">
+                                                                                <img loading="lazy" decoding="async" width="300" height="300" src="/Content/images/t-n321_02-300x300.png" class="secondary-image attachment-shop-catalog" alt="" srcset="/Content/images/t-n321_02-300x300.png 300w, images/t-n321_02-150x150.png 150w, images/t-n321_02-100x100.png 100w, images/t-n321_02.png 510w" sizes="(max-width: 300px) 100vw, 300px">
+                                                                                <img loading="lazy" decoding="async" width="510" height="510" src="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="/Content/images/innovasonic-210i-hand_low-2-1-300x300.png 510w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 300w, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png, /Content/images/innovasonic-210i-hand_low-2-1-300x300.png 100w" sizes="(max-width: 510px) 100vw, 510px">
+                                                                            </div>
+                                                                        </div>
+                                                                        <h2 class="woocommerce-loop-product__title">Bộ điều khiển nhiệt độ Novus N321</h2>
+                                                                        <div class="star-rating" title="Chưa đánh giá"><span style="width:20%"><strong class="rating">4</strong> ngoài 5</span></div>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section style="margin-top:50px" class="elementor-section elementor-top-section elementor-element elementor-element-d9a212d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d9a212d" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5b20956" data-id="5b20956" data-element_type="column">
+                                    <div style="padding:0px !important" class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <section style="border-radius:0px" class="elementor-section elementor-inner-section elementor-element elementor-element-e3725cc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e3725cc" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9bd0404" data-id="9bd0404" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-8b035be elementor-widget elementor-widget-text-editor" data-id="8b035be" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix" style="text-align:left !important; padding-top:5px; padding-bottom:5px; padding-left:10px">
+                                                                                <strong><span style="font-size: 20pt;">GIẢI PHÁP</span></strong>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-4f139fd elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4f139fd" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-dc17827" data-id="dc17827" data-element_type="column">
+                                    <div style="padding:0px !important" class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-ba9f07c elementor-widget elementor-widget-posts" data-id="ba9f07c" data-element_type="widget" data-widget_type="posts.default">
+                                                <div class="elementor-widget-container">
+                                                    <!-- Thêm Swiper Slider -->
+                                                    <div class="swiper-container project-slider">
+                                                        <div class="swiper-wrapper">
+                                                            <!-- Slide 1 -->
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px;">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="text-align:center; min-height:200px !important; padding:5px 10px ">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt" style="text-align:justify !important">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!-- Slide 2 -->
+
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px;">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="min-height:200px !important; padding:5px 10px ">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px;">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="min-height:200px !important; padding:5px 10px ">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px;">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="min-height:200px !important; padding:5px 10px ">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px;">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="min-height:200px !important; padding:5px 10px ">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="swiper-slide" style="box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 11.0083px 0px;">
+                                                                <div class="elementor-post__card">
+                                                                    <a class="elementor-post__thumbnail__link" href="https://vn-tech.com.vn/?p=18580">
+                                                                        <div class="elementor-post__thumbnail">
+                                                                            <img loading="lazy" decoding="async" width="711" height="400" src="/Content/images/phuong-phap-do-luu-luong.png" class="attachment-full size-full" alt="" srcset="/Content/images/phuong-phap-do-luu-luong.png 711w, images/phuong-phap-do-luu-luong-300x169.png 300w, images/phuong-phap-do-luu-luong-600x338.png 600w" sizes="(max-width: 711px) 100vw, 711px">
+                                                                        </div>
+                                                                    </a>
+                                                                    <div class="elementor-post__text" style="min-height:200px !important; padding:5px 10px ">
+                                                                        <h3 class="elementor-post__title">
+                                                                            <a href="https://vn-tech.com.vn/?p=18580">
+                                                                                Phương pháp đo lưu lượng trong nhà máy nhiệt điện
+                                                                            </a>
+                                                                        </h3>
+                                                                        <div class="elementor-post__excerpt">
+                                                                            <p>Việc đo lưu lượng chính xác trong nhà máy nhiệt điện đóng vai trò quan trọng trong việc đảm bảo hiệu quả hoạt động...</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- Nút điều hướng -->
+                                                        <!--<div class="swiper-button-prev"></div>
+                                                        <div class="swiper-button-next"></div>-->
+                                                        <!-- Phân trang (dots) -->
+                                                        <!--<div class="swiper-pagination"></div>-->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

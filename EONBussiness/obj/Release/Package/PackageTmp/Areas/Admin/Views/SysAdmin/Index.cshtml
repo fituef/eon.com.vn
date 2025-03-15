@@ -1,0 +1,120 @@
+﻿@model EONBussiness.DbContext.tbSetup
+
+@{
+    ViewBag.Title = "THÔNG TIN TRANG";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2 style="text-align:center">THÔNG TIN TRANG</h2>
+<hr />
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+        <div class="form-group">
+            @Html.Label("TRỤ SỞ CÔNG TY", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trusochinh, new { htmlAttributes = new { @readonly = true, @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("VĂN PHÒNG CÔNG TY", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.vanphong, new { htmlAttributes = new { @readonly = true, @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("ĐIỆN THOẠI CÔNG TY", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dienthoai, new { htmlAttributes = new { @readonly = true, @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("HOTLINE CÔNG TY", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.hotline, new { htmlAttributes = new { @readonly = true, @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("EMAIL CÔNG TY", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.email, new { htmlAttributes = new { @readonly = true, @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("ĐẠI DIỆN LIÊN HỆ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.tenlienhe, new { htmlAttributes = new { @readonly = true, @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("EMAIL LIÊN HỆ ĐẠI DIỆN", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.emaillienhe, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                @Html.ValidationMessageFor(model => model.emaillienhe, "", new { @readonly = true, @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("ĐIỆN THOẠI LIÊN HỆ ĐẠI DIỆN", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.dienthoailienhe, new { htmlAttributes = new { @class = "form-control", @required = "required" } })
+                @Html.ValidationMessageFor(model => model.dienthoailienhe, "", new { @readonly = true, @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("FANPAGE FB (NẾU CÓ)", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.fb, new { htmlAttributes = new { @readonly = true, @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("YOUTUBE CHANNEL(NẾU CÓ)", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.yt, new { htmlAttributes = new { @readonly = true, @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("LINKEDIN FB (NẾU CÓ)", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.lk, new { htmlAttributes = new { @readonly = true, @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("MAPS CTY", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.maps, new { htmlAttributes = new { @readonly = true, @class = "form-control", @required = "required" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("MÃ SỐ THUẾ", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.mst, new { htmlAttributes = new { @readonly = true, @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.Label("THÔNG BÁO BCT", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.congthuong, new { htmlAttributes = new { @readonly = true, @class = "form-control" } })
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <a href="/admin/sysadmin/edit" class="btn btn-success">CẬP NHẬT</a>
+            </div>
+        </div>
+    </div>
+}

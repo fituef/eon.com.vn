@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EONBusinessModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbBanner">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="link" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="hienthi" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbdoitac">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tendoitac" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="viewus" Type="Int32" />
+    <Property Name="hienthi" Type="Boolean" />
+    <Property Name="ghim" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbduan">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tenduan" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="soluong" Type="Int32" />
+    <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="viewus" Type="Int32" />
+    <Property Name="ghim" Type="Boolean" />
+    <Property Name="hienthi" Type="Boolean" />
+    <Property Name="ngaycapnhat" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbGioiThieu">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tieude" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="mota" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="hienthi" Type="Boolean" />
+    <Property Name="viewus" Type="Int32" />
+    <Property Name="ngaycapnhat" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="tbkhachhang">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tenkhachhang" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="viewus" Type="Int32" />
+    <Property Name="hienthi" Type="Boolean" />
+    <Property Name="ghim" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbLienHe">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tenkhach" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dienthoai" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="daichi" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="chude" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="noidung" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="ngaygui" Type="DateTime" Precision="3" />
+    <Property Name="xuly" Type="Boolean" />
+    <Property Name="ngayxuly" Type="DateTime" Precision="3" />
+    <Property Name="noidungxl" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tbsanpham">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="danhmucid" Type="Int32" />
+    <Property Name="tensp" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="hinhanh1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="hinhanh2" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="hinhanh3" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="soluong" Type="Int32" />
+    <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="viewus" Type="Int32" />
+    <Property Name="ghim" Type="Boolean" />
+    <Property Name="hienthi" Type="Boolean" />
+    <Property Name="ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="filehuongdan" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="isbanner" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbSetup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="trusochinh" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="vanphong" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="dienthoai" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="hotline" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tenlienhe" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="emaillienhe" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="dienthoailienhe" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="fb" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="yt" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="lk" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="maps" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="viewus" Type="Int32" />
+    <Property Name="mst" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="congthuong" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="tbtuyendung">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tentd" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="soluong" Type="Int32" />
+    <Property Name="motacv" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="yeucau" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="quyenloi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="lienhe" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="viewus" Type="Int32" />
+    <Property Name="hienthi" Type="Boolean" />
+    <Property Name="ghim" Type="Boolean" />
+    <Property Name="ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="ngayhethan" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="EONBusinessEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbBanners" EntityType="Self.tbBanner" />
+    <EntitySet Name="tbdoitacs" EntityType="Self.tbdoitac" />
+    <EntitySet Name="tbduans" EntityType="Self.tbduan" />
+    <EntitySet Name="tbGioiThieux" EntityType="Self.tbGioiThieu" />
+    <EntitySet Name="tbkhachhangs" EntityType="Self.tbkhachhang" />
+    <EntitySet Name="tbLienHes" EntityType="Self.tbLienHe" />
+    <EntitySet Name="tbsanphams" EntityType="Self.tbsanpham" />
+    <EntitySet Name="tbSetups" EntityType="Self.tbSetup" />
+    <EntitySet Name="tbtuyendungs" EntityType="Self.tbtuyendung" />
+    <EntitySet Name="C__MigrationHistory" EntityType="EONBusinessModel.C__MigrationHistory" />
+    <EntitySet Name="AspNetRoles" EntityType="EONBusinessModel.AspNetRole" />
+    <EntitySet Name="AspNetUserClaims" EntityType="EONBusinessModel.AspNetUserClaim" />
+    <EntitySet Name="AspNetUserLogins" EntityType="EONBusinessModel.AspNetUserLogin" />
+    <EntitySet Name="AspNetUsers" EntityType="EONBusinessModel.AspNetUser" />
+    <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="EONBusinessModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="EONBusinessModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+      <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+    </AssociationSet>
+    <AssociationSet Name="AspNetUserRoles" Association="EONBusinessModel.AspNetUserRoles">
+      <End Role="AspNetRole" EntitySet="AspNetRoles" />
+      <End Role="AspNetUser" EntitySet="AspNetUsers" />
+    </AssociationSet>
+    <EntitySet Name="tbdanhmuctts" EntityType="EONBusinessModel.tbdanhmuctt" />
+    <EntitySet Name="tbdanhmucsps" EntityType="EONBusinessModel.tbdanhmucsp" />
+    <EntitySet Name="tbtintucs" EntityType="EONBusinessModel.tbtintuc" />
+  </EntityContainer>
+  <EntityType Name="C__MigrationHistory">
+    <Key>
+      <PropertyRef Name="MigrationId" />
+      <PropertyRef Name="ContextKey" />
+    </Key>
+    <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+    <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AspNetRole">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUsers" Relationship="EONBusinessModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserClaim">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="EONBusinessModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUserLogin">
+    <Key>
+      <PropertyRef Name="LoginProvider" />
+      <PropertyRef Name="ProviderKey" />
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUser" Relationship="EONBusinessModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+  </EntityType>
+  <EntityType Name="AspNetUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+    <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+    <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+    <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+    <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+    <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AspNetUserClaims" Relationship="EONBusinessModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+    <NavigationProperty Name="AspNetUserLogins" Relationship="EONBusinessModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+    <NavigationProperty Name="AspNetRoles" Relationship="EONBusinessModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+  </EntityType>
+  <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+    <End Type="EONBusinessModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EONBusinessModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserClaim">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+    <End Type="EONBusinessModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="EONBusinessModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AspNetUser">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AspNetUserLogin">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AspNetUserRoles">
+    <End Type="EONBusinessModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+    <End Type="EONBusinessModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+  </Association>
+  <EntityType Name="tbdanhmuctt">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tendanhmuc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="tukhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="mota" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="hienthi" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbdanhmucsp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tendanhmuc" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="tukhoa" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="mota" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="chitiet" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="alias" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="idcha" Type="Int32" />
+    <Property Name="hienthi" Type="Boolean" />
+    <Property Name="home" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tbtintuc">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="tentintuc" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="alias" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="tukhoa" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="mota" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="hinhanh" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="noidung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="viewus" Type="Int32" />
+    <Property Name="ghim" Type="Boolean" />
+    <Property Name="hienthi" Type="Boolean" />
+    <Property Name="ngaycapnhat" Type="DateTime" Precision="3" />
+    <Property Name="iddm" Type="Int32" />
+  </EntityType>
+</Schema>
