@@ -1,0 +1,178 @@
+﻿@model IEnumerable<EONBussiness.DbContext.tbsanpham>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutChiTiet.cshtml";
+}
+<div class="site grid-container container hfeed grid-parent" id="page">
+    <div class="site-content" id="content">
+        <div data-elementor-type="single" data-elementor-id="11077" class="elementor elementor-11077 elementor-location-single post-24 page type-page status-publish" data-elementor-settings="[]">
+            <div class="elementor-section-wrap">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-dfcf8fc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="dfcf8fc" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4667fab" data-id="4667fab" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-column-wrap elementor-element-populated">
+                                    <div class="elementor-widget-wrap">
+                                        <section class="elementor-section elementor-inner-section elementor-element elementor-element-be3d6f5 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="be3d6f5" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-default">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-da08786" data-id="da08786" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-3a4ac95a elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="3a4ac95a" data-element_type="widget" data-widget_type="theme-post-title.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <h1 class="elementor-heading-title elementor-size-default" style="text-align: center !important; color: #4358a7 !important;"> SẢN PHẨM</h1>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section style="margin-top:20PX" class="elementor-section elementor-inner-section elementor-element elementor-element-985b859 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="985b859" data-element_type="section">
+                                            <div class="elementor-container elementor-column-gap-no">
+                                                <div class="elementor-row">
+                                                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-fcca97d" data-id="fcca97d" data-element_type="column">
+                                                        <div class="elementor-column-wrap elementor-element-populated">
+                                                            <div class="elementor-widget-wrap">
+                                                                <div class="elementor-element elementor-element-12ca4322 elementor-widget elementor-widget-theme-post-content" data-id="12ca4322" data-element_type="widget" data-widget_type="theme-post-content.default">
+                                                                    <div class="elementor-widget-container">
+                                                                        <style>
+                                                                            .elementor-24 .elementor-element.elementor-element-d63955f.elementor-wc-products ul.products {
+                                                                                grid-column-gap: 10px;
+                                                                                grid-row-gap: 20px;
+                                                                            }
+
+                                                                                .elementor-24 .elementor-element.elementor-element-d63955f.elementor-wc-products ul.products li.product {
+                                                                                    text-align: center;
+                                                                                    border-radius: 15px;
+                                                                                    padding: 5px 5px 5px 5px;
+                                                                                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+                                                                                    background-color: #FFFFFF;
+                                                                                }
+
+                                                                                    .elementor-24 .elementor-element.elementor-element-d63955f.elementor-wc-products ul.products li.product .woocommerce-loop-product__title {
+                                                                                        color: #C50B1A;
+                                                                                    }
+
+                                                                                    .elementor-24 .elementor-element.elementor-element-d63955f.elementor-wc-products ul.products li.product .woocommerce-loop-category__title {
+                                                                                        color: #C50B1A;
+                                                                                    }
+
+                                                                                    .elementor-24 .elementor-element.elementor-element-d63955f.elementor-wc-products ul.products li.product .woocommerce-loop-product__title, .elementor-24 .elementor-element.elementor-element-d63955f.elementor-wc-products ul.products li.product .woocommerce-loop-category__title {
+                                                                                        font-family: "Tahoma", Sans-serif;
+                                                                                        font-size: 14px;
+                                                                                        font-weight: 600;
+                                                                                    }
+
+                                                                                    .elementor-24 .elementor-element.elementor-element-d63955f.elementor-wc-products ul.products li.product .button {
+                                                                                        color: #FFFFFF;
+                                                                                        background-color: #0602C0;
+                                                                                        font-family: "Tahoma", Sans-serif;
+                                                                                        font-size: 12px;
+                                                                                        font-weight: 400;
+                                                                                    }
+
+                                                                                    .elementor-24 .elementor-element.elementor-element-d63955f.elementor-wc-products ul.products li.product span.onsale {
+                                                                                        display: block;
+                                                                                    }
+
+                                                                            @@media(max-width:1024px) {
+                                                                                .elementor-24 .elementor-element.elementor-element-d63955f.elementor-wc-products ul.products {
+                                                                                    grid-column-gap: 20px;
+                                                                                    grid-row-gap: 40px;
+                                                                                }
+                                                                            }
+
+                                                                            @@media(max-width:767px) {
+                                                                                .elementor-24 .elementor-element.elementor-element-d63955f.elementor-wc-products ul.products {
+                                                                                    grid-column-gap: 20px;
+                                                                                    grid-row-gap: 40px;
+                                                                                }
+                                                                            }
+                                                                        </style>		<div data-elementor-type="wp-page" data-elementor-id="24" class="elementor elementor-24" data-elementor-settings="[]">
+                                                                            <div class="elementor-inner">
+                                                                                <div class="elementor-section-wrap">
+                                                                                    <section class="elementor-section elementor-top-section elementor-element elementor-element-6dc34dc elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6dc34dc" data-element_type="section">
+                                                                                        <div class="elementor-container elementor-column-gap-default">
+                                                                                            <div class="elementor-row">
+                                                                                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6ec5e90" data-id="6ec5e90" data-element_type="column">
+                                                                                                    <div class="elementor-column-wrap elementor-element-populated">
+                                                                                                        <div class="elementor-widget-wrap">
+                                                                                                            <div class="elementor-element elementor-element-d63955f elementor-product-loop-item--align-center elementor-grid-4 elementor-grid-tablet-3 elementor-grid-mobile-2 elementor-products-grid elementor-wc-products elementor-show-pagination-border-yes elementor-widget elementor-widget-woocommerce-products" data-id="d63955f" data-element_type="widget" data-widget_type="woocommerce-products.default">
+                                                                                                                <div class="elementor-widget-container">
+                                                                                                                    <div class="woocommerce columns-4 ">
+                                                                                                                        <div id="wc-column-container" class="wc-columns-container wc-columns-4 wc-tablet-columns-2 wc-mobile-columns-1">
+                                                                                                                            <div class="woocommerce-notices-wrapper"></div><ul class="products elementor-grid columns-4">
+                                                                                                                                @foreach (var item in Model)
+                                                                                                                                {
+
+                                                                                                                                    <li class="sales-flash-overlay woocommerce-text-align-center woocommerce-image-align-center do-quantity-buttons product type-product post-16230 status-publish last instock product_cat-van-cau product_cat-van-va-phu-kien has-post-thumbnail shipping-taxable product-type-simple">
+                                                                                                                                        <a href="https://vn-tech.com.vn/?product=van-cau-hop-kim-thep-ket-noi-mat-bich-chuan-din-ktn423f" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                                                                                                                                            <div class="wc-product-image">
+                                                                                                                                                <div class="inside-wc-product-image"><img width="300" height="300" src="https://vn-tech.com.vn/wp-content/uploads/2021/09/423-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://vn-tech.com.vn/wp-content/uploads/2021/09/423-300x300.jpg 300w, https://vn-tech.com.vn/wp-content/uploads/2021/09/423-150x150.jpg 150w, https://vn-tech.com.vn/wp-content/uploads/2021/09/423-100x100.jpg 100w, https://vn-tech.com.vn/wp-content/uploads/2021/09/423.jpg 600w" sizes="(max-width: 300px) 100vw, 300px"></div>
+                                                                                                                                            </div>
+                                                                                                                                            <h2 class="woocommerce-loop-product__title">Van cầu hợp kim thép kết nối mặt bích chuẩn DIN KTN423F</h2>
+                                                                                                                                            <div class="star-rating" title="Chưa đánh giá"><span style="width:@item.soluong%"><strong class="rating">@item.soluong</strong> ngoài 5</span></div>
+                                                                                                                                        </a>
+                                                                                                                                    </li>
+                                                                                                                                }
+                                                                                                                            </ul>
+                                                                                                                        </div><nav class="woocommerce-pagination" aria-label="Phân trang sản phẩm">
+                                                                                                                            <ul class="page-numbers">
+                                                                                                                                <li><span aria-label="Trang 1" aria-current="page" class="page-numbers current">1</span></li>
+                                                                                                                                <li><a aria-label="Trang 2" class="page-numbers" href="/?page_id=24&amp;product-page=2">2</a></li>
+                                                                                                                                <li><a aria-label="Trang 3" class="page-numbers" href="/?page_id=24&amp;product-page=3">3</a></li>
+                                                                                                                                <li><a aria-label="Trang 4" class="page-numbers" href="/?page_id=24&amp;product-page=4">4</a></li>
+                                                                                                                                <li><span class="page-numbers dots">…</span></li>
+                                                                                                                                <li><a aria-label="Trang 11" class="page-numbers" href="/?page_id=24&amp;product-page=11">11</a></li>
+                                                                                                                                <li><a aria-label="Trang 12" class="page-numbers" href="/?page_id=24&amp;product-page=12">12</a></li>
+                                                                                                                                <li><a aria-label="Trang 13" class="page-numbers" href="/?page_id=24&amp;product-page=13">13</a></li>
+                                                                                                                                <li><a class="next page-numbers" href="/?page_id=24&amp;product-page=2">→</a></li>
+                                                                                                                            </ul>
+                                                                                                                        </nav>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </section>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-5141a92 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5141a92" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-row">
+                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c8bbf15" data-id="c8bbf15" data-element_type="column">
+                                <div class="elementor-column-wrap">
+                                    <div class="elementor-widget-wrap">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+</div>

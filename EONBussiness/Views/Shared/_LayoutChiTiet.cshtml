@@ -1041,7 +1041,6 @@
     </script>
     <script src="/Content/js/add-to-cart.min.js" id="wc-add-to-cart-js" defer data-wp-strategy="defer"></script>
     <script src="/Content/js/jquery.zoom.min.js" id="zoom-js" defer data-wp-strategy="defer"></script>
-    <script src="/Content/js/jquery.flexslider.min.js" id="flexslider-js" defer data-wp-strategy="defer"></script>
     <script src="/Content/js/photoswipe.min.js" id="photoswipe-js" defer data-wp-strategy="defer"></script>
     <script src="/Content/js/photoswipe-ui-default.min.js" id="photoswipe-ui-default-js" defer data-wp-strategy="defer"></script>
     <script id="wc-single-product-js-extra">
@@ -1634,9 +1633,6 @@
     <link rel="stylesheet" id="elementor-post-154-css" href="/Content/css/post-154.css" type="text/css" media="all">
     <link rel="stylesheet" id="elementor-post-13544-css" href="/Content/css/post-13544.css" type="text/css" media="all">
     <link rel="stylesheet" id="e-animations-css" href="/Content/css/animations.min.css" type="text/css" media="all">
-    <!--[if lte IE 11]>
-    <script src="https://vn-tech.com.vn/wp-content/themes/generatepress/assets/js/classList.min.js?ver=3.5.1" id="generate-classlist-js"></script>
-    <![endif]-->
     <script id="generate-menu-js-extra">
         var generatepressMenu = { "toggleOpenedSubMenus": "1", "openSubMenuLabel": "M\u1edf Sub-menu", "closeSubMenuLabel": "\u0110\u00f3ng Sub-menu" };
     </script>
@@ -1683,6 +1679,21 @@
     <script src="/Content/js/preloaded-elements-handlers.min.js" id="pro-preloaded-elements-handlers-js"></script>
     <script src="/Content/js/preloaded-modules.min.js" id="preloaded-modules-js"></script>
     <script src="/Content/js/jquery.sticky.min.js" id="e-sticky-js"></script>
+    <script>
+        function SetMyIMG(img2) {
+            const img = document.getElementById('myImage');
+            img.srcset = img2;
+            img.src = img2;
+            img.sizes = '100vw';
+            const images = document.querySelectorAll('.zoomImg');
+            images.forEach(img => {
+                img.srcset = img2;
+                img.src = img2;
+                img.sizes = '100vw';
+            });
+        }
+    </script>
+
     <script type="text/javascript">
         (function () {
             var expirationDate = new Date();

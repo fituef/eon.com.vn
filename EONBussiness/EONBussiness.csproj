@@ -1794,6 +1794,9 @@
     <Content Include="Views\TuyenDungs\Index.cshtml" />
     <Content Include="Views\TuyenDungs\Details.cshtml" />
     <Content Include="Views\SanPhams\Details.cshtml" />
+    <Content Include="Views\Shared\_LayoutChiTiet.cshtml" />
+    <Content Include="Views\SanPhams\GetSPTT.cshtml" />
+    <Content Include="Views\SanPhams\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

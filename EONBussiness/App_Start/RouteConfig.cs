@@ -18,6 +18,11 @@ namespace EONBussiness
                 url: "tuyen-dung/{alias}-{id}",
                 defaults: new { controller = "TuyenDungs", action = "Details", id = UrlParameter.Optional }
             );
+            routes.MapRoute(
+                name: "TuyenDungs_Index",
+                url: "tuyen-dung",
+                defaults: new { controller = "TuyenDungs", action = "Index", id = UrlParameter.Optional }
+            );
 
             routes.MapRoute(
 				name: "Default",

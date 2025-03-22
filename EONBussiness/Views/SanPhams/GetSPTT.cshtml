@@ -1,0 +1,17 @@
+﻿@model IEnumerable<EONBussiness.DbContext.tbsanpham>
+
+
+@foreach (var item in Model)
+{
+
+    <li class="sales-flash-overlay woocommerce-text-align-center wc-related-upsell-columns-4 wc-related-upsell-tablet-columns-2 wc-related-upsell-mobile-columns-1 do-quantity-buttons product type-product post-3655 status-publish instock product_cat-dong-ho-ap-suat product_cat-thiet-bi-do-ap-suat has-post-thumbnail shipping-taxable product-type-simple">
+        <a href="https://vn-tech.com.vn/?product=dong-ho-ap-suat-mat-100mm-7781-40-bar-suku" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+            <div class="wc-product-image">
+                <div class="inside-wc-product-image"><img width="300" height="300" src="https://vn-tech.com.vn/wp-content/uploads/2021/06/suku-7781-479-100-40bar-3.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" decoding="async" loading="lazy" srcset="https://vn-tech.com.vn/wp-content/uploads/2021/06/suku-7781-479-100-40bar-3.jpg 300w, https://vn-tech.com.vn/wp-content/uploads/2021/06/suku-7781-479-100-40bar-3-150x150.jpg 150w, https://vn-tech.com.vn/wp-content/uploads/2021/06/suku-7781-479-100-40bar-3-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px"></div>
+            </div>
+            <h2 class="woocommerce-loop-product__title">@item.tensp</h2>
+            <div class="star-rating" title="Chưa đánh giá"><span style="width:@item.soluong.Value%"><strong class="rating">@item.soluong</strong> ngoài 5</span></div>
+</a>
+
+</li>
+}

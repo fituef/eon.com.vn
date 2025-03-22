@@ -33,5 +33,6 @@ namespace EONBussiness.DbContext
         public string filehuongdan { get; set; }
         public Nullable<bool> isbanner { get; set; }
         public string thongso { get; set; }
+        public string motasp { get; set; }
     }
 }

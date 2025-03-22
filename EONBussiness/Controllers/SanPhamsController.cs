@@ -37,5 +37,19 @@ namespace EONBussiness.Controllers
                 return Redirect("/error");
             }
         }
+        public ActionResult GetSPTT(int dm, int sp)
+        {
+            List<tbsanpham> lst = new List<tbsanpham>();
+            try
+            {
+               
+                lst = db.Value.tbsanphams.Where(s=>s.danhmucid ==dm && s.ID !=sp).Take(4).ToList();
+                return PartialView(lst);
+            }
+            catch
+            {
+                return PartialView(lst = new List<tbsanpham>());
+            }
+        }
     }
 }
